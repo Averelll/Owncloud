@@ -1,5 +1,9 @@
 [![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/OwnCloud2-Logo.svg/595px-OwnCloud2-Logo.svg.png)](http://owncloud.org/)
 
+# Kudos
+
+This repo was copied from dperson/owncloud. Full kudos to him for this. I changed the Dockerfile just to add some extra volume. Some other changes may follow.
+
 # ownCloud
 
 ownCloud docker container
