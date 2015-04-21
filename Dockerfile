@@ -53,7 +53,7 @@ RUN export DEBIAN_FRONTEND='noninteractive' && \
 COPY owncloud.sh /usr/bin/
 
 VOLUME ["/var/www/owncloud/apps", "/var/www/owncloud/config", \
-            "/var/www/owncloud/data"]
+            "/var/www/owncloud/data", "/data"]
 
 EXPOSE 80
 
