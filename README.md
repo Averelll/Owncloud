@@ -20,28 +20,28 @@ but you can choose PostgreSQL or MySQL, for more performance.
 
 ## Hosting a ownCloud instance on port 8000
 
-    sudo docker run --name owncloud -p 8000:80 -d dperson/owncloud
+    sudo docker run --name owncloud -p 8000:80 -d averelll/owncloud
 
 OR with a DB:
 
     sudo docker run --name postgres -d postgres
     sudo docker run --name owncloud --link postgresql:db -p 8000:80 -d \
-                dperson/owncloud
+                averelll/owncloud
 
 AND/OR set the host name (important for the WebDAV feature):
 
     sudo docker run -h host.domain.com --name owncloud -p 8000:80 -d \
-                dperson/owncloud
+                averelll/owncloud
 
 AND/OR set local storage:
 
     sudo docker run --name owncloud -p 8000:80 \
                 -v /path/to/owncloud/directory:/var/www/owncloud/data -d \
-                dperson/owncloud
+                averelll/owncloud
 
 ## Configuration
 
-    sudo docker run -it --rm dperson/owncloud -h
+    sudo docker run -it --rm averelll/owncloud -h
 
     Usage: owncloud.sh [-opt] [command]
     Options (fields in '[]' are optional, '<>' are required):
@@ -60,11 +60,11 @@ ENVIROMENT VARIABLES (only available with `docker run`)
 Any of the commands can be run at creation with `docker run` or later with
 `docker exec owncloud.sh` (as of version 1.3 of docker).
 
-    sudo docker run --name owncloud -d dperson/owncloud -t EST5EDT
+    sudo docker run --name owncloud -d averelll/owncloud -t EST5EDT
 
 Will get you the same settings as
 
-    sudo docker run --name owncloud -p 8000:80 -d dperson/owncloud
+    sudo docker run --name owncloud -p 8000:80 -d averelll/owncloud
     sudo docker exec owncloud owncloud.sh -T EST5EDT ls -AlF /etc/localtime
     sudo docker restart owncloud
 
@@ -73,4 +73,4 @@ Will get you the same settings as
 ## Issues
 
 If you have any problems with or questions about this image, please contact me
-through a [GitHub issue](https://github.com/dperson/owncloud/issues).
+through a [GitHub issue](https://github.com/averelll/owncloud/issues).
